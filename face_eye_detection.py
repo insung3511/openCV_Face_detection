@@ -21,7 +21,8 @@ while 1:
         cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
         roi_gray = gray[y:y+h, x:x+w]
         roi_color = img[y:y+h, x:x+w]
-	t_count = t_count + 1
+        
+    t_count = t_count + 1
 
     cv2.imshow('img',img)
     k = cv2.waitKey(30) & 0xff
@@ -31,5 +32,5 @@ while 1:
 cap.release()
 cv2.destroyAllWindows()
 
-print "All count :" , all_count
-print "Detection count :" , t_count
+print ("All count :" , all_count)
+print ("Detection count :" , t_count)

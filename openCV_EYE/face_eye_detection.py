@@ -1,12 +1,5 @@
-
-
-import sys
-import numpy as np
 import cv2
 import time
-import csv
-import logging
-import datetime
 
 all_count = 0
 true_count = 0
@@ -51,7 +44,7 @@ while 1:
     one_m_timer_end = time.time()
     #print str(one_m_timer_end - one_m_timer_start)
     if( one_m_timer_end - one_m_timer_start > 10 ):
-        print one_m_timer_end - one_m_timer_start
+        print (one_m_timer_end - one_m_timer_start)
         break
 
     cv2.imshow('img',img)
@@ -63,5 +56,5 @@ cap.release()
 cv2.destroyAllWindows()
 file.close()
 
-print "All count :" , all_count
-print "Detection count :" , true_count
+print ("All count :" , all_count)
+print ("Detection count :" , true_count)
